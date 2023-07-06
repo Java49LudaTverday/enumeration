@@ -9,13 +9,17 @@ public enum LengthUnit {
 		this.value = value;
 	}
 
+	public float getValue() {
+		return value;
+	}
 	public Length between(Length length1, Length length2) {
 
 		Length newLength2 = length2.convert(this);
 		Length newLength1 = length1.convert(this);
 
 		float between = newLength2.getAmount() - newLength1.getAmount();
-
 		return new Length(between, this);
 	}
+	
+	
 }

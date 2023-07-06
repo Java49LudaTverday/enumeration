@@ -7,7 +7,7 @@ public enum WeightUnit {
 	WeightUnit(float value){
 		this.value = value;
 	}
-	public  float convert(WeightUnit to, float amount) {
+	public  float convert(WeightUnit to, float amount) {	
 		return value * amount / to.value;
 	}
 
